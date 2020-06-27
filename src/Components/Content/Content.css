@@ -1,0 +1,10 @@
+.content {
+  background-color: #36454f;
+  min-height: 80vh;
+  margin-top: 0;
+  color: white;
+}
+
+.test {
+  height: 500px;
+}

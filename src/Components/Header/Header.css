@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    background-color: #263037;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+
+}
+
+.hamburger {
+    background-color: white;
+    height: 5px;
+    width: 30px;
+    margin: 6px 0;
+    display: block;
+
+}
+
+.mobile-menu-btn {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.para {
+    margin-top: 50px;
+}
