@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 
 import SideDrawer from "../Mobile Drawer/SideDrawer";
 
@@ -6,7 +6,7 @@ import "./Header.css";
 
 function Header(props) {
 
-  const [menuToggle, setMenuToggle] = React.useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
 
   function toggleMenu() {
     setMenuToggle(!menuToggle);
