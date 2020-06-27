@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import Header from "./Components/Header/Header";
 import Content from "./Components/Content/Content";
@@ -12,12 +13,19 @@ function App() {
     setMenuToggle(!menuToggle);
   }
   function closeMenuOnly() {
-      setMenuToggle(false);
+    setMenuToggle(false);
   }
 
   return (
     <div className="App">
-      {menuToggle ? <SideDrawer closeDrawer={toggleMenu} /> : null}
+      <CSSTransition
+        in={menuToggle}
+        timeout={300}
+        classNames="example"
+        unmountOnExit
+      >
+        <SideDrawer closeDrawer={toggleMenu} />
+      </CSSTransition>
       <Header openDrawer={toggleMenu} />
       <Content closemenu={closeMenuOnly} />
       <Footer />
