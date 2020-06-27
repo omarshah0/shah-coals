@@ -19,10 +19,6 @@
   margin-left: 20px;
 }
 
-.para {
-  margin-top: 50px;
-}
-
 @media (min-width: 450px) {
   .hamburger {
       display: none;
