@@ -1,17 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState} from "react";
 
 import SideDrawer from "../Mobile Drawer/SideDrawer";
 
 import "./Header.css";
 
 function Header(props) {
-  // var [sideMenu, setSideMenu] = React.useState(false);
+
+  const [menuToggle, setMenuToggle] = React.useState(false);
+
+  function toggleMenu() {
+    setMenuToggle(!menuToggle);
+  }
 
   return (
     <div className="header">
-      {/* {sideMenu ? <SideDrawer /> : null} */}
-      {/* <div className="mobile-menu-btn" onClick={() => setSideMenu(true)}> */}
-      <div className="mobile-menu-btn" onClick={props.clicked}>
+      {menuToggle ? <SideDrawer props clicked={toggleMenu}/> : null }
+      <div className="mobile-menu-btn" onClick={toggleMenu}>
         <div className="hamburger"></div>
         <div className="hamburger"></div>
         <div className="hamburger"></div>
