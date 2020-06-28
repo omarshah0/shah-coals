@@ -1,9 +1,5 @@
 .header {
-  display: flex;
-  background-color: #263037;
-  height: 80px;
-  width: 100%;
-  align-items: center;
+  margin: 12px 0;
 }
 
 .hamburger {
@@ -19,8 +15,39 @@
   margin-left: 20px;
 }
 
-@media (min-width: 450px) {
+.header-desktop {
+  display: none;
+}
+
+@media (min-width: 700px) {
   .hamburger {
-      display: none;
+    display: none;
+  }
+
+  .header-desktop {
+    display: unset;
+  }
+
+  ul li {
+    list-style: none;
+    color: white;
+    display: inline;
+    margin: 0 40px;
+  }
+  
+  .nav-logo-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-list {
+    display: inline-block;
+  }
+  
+  .brand-logo {
+    grid-area: logo;
+  }
+  
+  .navbar {
+    grid-area: nav;
   }
 }

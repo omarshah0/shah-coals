@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <CSSTransition
         in={menuToggle}
-        timeout={300}
+        timeout={150}
         classNames="example"
         unmountOnExit
       >

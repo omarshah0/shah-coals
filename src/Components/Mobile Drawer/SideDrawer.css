@@ -6,7 +6,7 @@
   left: -100%;
   box-shadow: 5px 5px 8px #161c20;
   position: absolute;
-  animation: slide-in 0.3s ease-in-out;
+  animation: slide-in 0.15s ease-in;
   animation-fill-mode: forwards;
   z-index: 100;
 }
@@ -27,7 +27,7 @@
 }
 
 .example-exit-active {
-  animation: slide-out 0.3s ease-in-out;
+  animation: slide-out 0.15s ease-in;
   animation-fill-mode: forwards;
 
 }
