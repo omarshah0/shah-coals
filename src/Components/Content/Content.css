@@ -15,8 +15,23 @@
   z-index: -10;
 }
 
+.yellow-box-wrapper {
+  width: 130px;
+  height: 500px;
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  z-index: -9;
+}
+
+.yellow-box {
+  fill: none;
+  stroke-width: 15;
+  stroke: #ffa931;
+}
+
 @media (min-width: 700px) {
   .mummy {
-    left: 20%;
+    left: 25%;
   }
 }
