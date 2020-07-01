@@ -1,5 +1,4 @@
 import React from "react";
-import mummy from "../../Assets/mummy.png";
 
 import "./Content.css";
 
@@ -23,7 +22,7 @@ function Content(porps) {
           </p>
         </div>
         <div className="contact-info">
-          <div className="Office">
+          <div className="office">
             <h2>Office</h2>
             <h3>
               House 89/90, Bodla Colony <br></br>Dera Ghazi Khan

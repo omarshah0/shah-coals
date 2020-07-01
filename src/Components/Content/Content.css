@@ -1,81 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
-/* Desktop Media Query */
-
 .container {
-  background-image: url("../../Assets/mummy.png");
-  background-repeat: no-repeat;
-  background-position: 25vw;
-  background-size: 60vh;
-  margin: 0;
-  padding: 0;
-  min-height: calc(100vh - 4.165rem);
-  display: grid;
-  grid-template-areas: "left right";
-  grid-template-columns: 1fr 1fr;
-}
-
-.left {
+  min-height: calc(100vh - 7.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.rectangle {
-  border-color: yellow;
-  border-style: solid;
-  border-width: 8px;
-  min-height: 75%;
-  min-width: 20%;
-  align-self: flex-end;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: relative;
 }
 
 .content {
-  font-size: calc(14px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
   color: rgb(185, 185, 185);
   font-family: "Michroma", sans-serif;
-  padding: 0 1.5rem;
-}
-
-.shah,
-.coals {
-  margin: 2rem 0;
-  letter-spacing: 0.3rem;
-}
-
-.para {
-  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
-}
-
-.text-underline {
-  font-size: calc(8px + (26 - 8) * ((100vw - 300px) / (1600 - 300)));
-  text-decoration: underline;
+  text-align: center;
 }
 
 .contact-info {
-  color: rgb(185, 185, 185);
-  font-family: "montserrat";
-  font-size: 10px;
-  display: grid;
-  grid-template-areas: "office getInTouch";
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.office,
-.get-in-touch {
-  padding: 0 2rem;
+  margin-top: 13rem;
 }
 
 .design_left,
@@ -84,16 +25,123 @@
   width: 10px;
   height: 100px;
   position: absolute;
+  top: 55%;
 }
 
 .design_left {
-  top: 40%;
   left: 1%;
 }
 
 .design_right {
-  top: 40%;
   right: 1%;
+}
+
+.shah,
+.coals {
+  margin: auto;
+  letter-spacing: 0.1rem;
+  font-size: 4rem;
+}
+
+.para {
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  color: rgb(185, 185, 185);
+  font-family: "Michroma", sans-serif;
+}
+
+.office,
+.get-in-touch {
+  font-size: 10px;
+}
+
+/* Media Query For Desktop */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    background-image: url("../../Assets/mummy.png");
+    background-repeat: no-repeat;
+    background-position: 25vw;
+    background-size: 60vh;
+    margin: 0;
+    padding: 0;
+    min-height: calc(100vh - 4.165rem);
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .rectangle {
+    border-color: yellow;
+    border-style: solid;
+    border-width: 8px;
+    min-height: 75%;
+    min-width: 20%;
+    align-self: flex-end;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .content {
+    font-size: calc(14px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: rgb(185, 185, 185);
+    font-family: "Michroma", sans-serif;
+    padding: 0 1.5rem;
+  }
+
+  .shah,
+  .coals {
+    margin: 2rem 0;
+    letter-spacing: 0.3rem;
+  }
+
+  .para {
+    font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+  .text-underline {
+    font-size: calc(8px + (26 - 8) * ((100vw - 300px) / (1600 - 300)));
+    text-decoration: underline;
+  }
+
+  .contact-info {
+    color: rgb(185, 185, 185);
+    font-family: "montserrat";
+    font-size: 10px;
+    display: grid;
+    grid-template-areas: "office getInTouch";
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .office,
+  .get-in-touch {
+    padding: 0 2rem;
+  }
+
+  .design_left,
+  .design_right {
+    top: 40%;
+  }
 }
 
 /* IPAD Media Query */
