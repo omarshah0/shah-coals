@@ -1,37 +1,261 @@
-.content {
-  margin-top: 0;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+/* Desktop Media Query */
+
+.container {
+  background-image: url("../../Assets/mummy.png");
+  background-repeat: no-repeat;
+  background-position: 25vw;
+  background-size: 60vh;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 4.165rem);
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 1fr 1fr;
 }
 
-.mummy-wrapper {
-  min-height: 85vh;
-}
-
-.mummy {
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
-  height: 80vh;
-  top: 32px;
-  left: 8%;
-  z-index: -10;
 }
 
-.yellow-box-wrapper {
-  width: 130px;
-  height: 500px;
+.rectangle {
+  border-color: yellow;
+  border-style: solid;
+  border-width: 8px;
+  min-height: 75%;
+  min-width: 20%;
+  align-self: flex-end;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.content {
+  font-size: calc(14px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  color: rgb(185, 185, 185);
+  font-family: "Michroma", sans-serif;
+  padding: 0 1.5rem;
+}
+
+.shah,
+.coals {
+  margin: 2rem 0;
+  letter-spacing: 0.3rem;
+}
+
+.para {
+  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.text-underline {
+  font-size: calc(8px + (26 - 8) * ((100vw - 300px) / (1600 - 300)));
+  text-decoration: underline;
+}
+
+.contact-info {
+  color: rgb(185, 185, 185);
+  font-family: "montserrat";
+  font-size: 10px;
+  display: grid;
+  grid-template-areas: "office getInTouch";
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.office,
+.get-in-touch {
+  padding: 0 2rem;
+}
+
+.design_left,
+.design_right {
+  background-color: aqua;
+  width: 10px;
+  height: 100px;
   position: absolute;
-  top: 20%;
-  left: 45%;
-  z-index: -9;
 }
 
-.yellow-box {
-  fill: none;
-  stroke-width: 15;
-  stroke: #ffa931;
+.design_left {
+  top: 40%;
+  left: 1%;
 }
 
-@media (min-width: 700px) {
-  .mummy {
-    left: 25%;
+.design_right {
+  top: 40%;
+  right: 1%;
+}
+
+/* IPAD Media Query */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    min-height: 50vh;
+    background-position: 10vw;
+    background-size: 35vh;
+  }
+
+  .rectangle {
+    height: 65%;
+    width: 35%;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-self: space-between;
   }
 }
+
+/* 
+.content {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  color: rgb(185, 185, 185);
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    position: relative;
+    height: 100vh;
+    max-height: calc(100vh - 4.6125rem);
+  }
+
+  .mummy-container {
+    position: absolute;
+    top: -10%;
+    bottom: 0%;
+    left: 25%;
+    right: 45%;
+  }
+
+  .mummy {
+    height: 100%;
+  }
+
+  .rect-container {
+    position: absolute;
+    height: 25rem;
+    width: 7rem;
+    top: 9%;
+    left: 60%;
+    border-color: yellow;
+    border-style: solid;
+    border-width: 8px;
+  }
+
+  .content {
+    position: absolute;
+    top: 10%;
+    left: 58%;
+    right: 10%;
+    font-family: "Michroma", sans-serif;
+  }
+
+  .text-underline {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+/* IPAD MEDIA QUERY  */
+
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .mummy {
+    display: none;
+  }
+
+  .rect-container {
+    top: 15%;
+    left: 0%;
+  }
+
+  .content {
+    top: 12%;
+    left: 45%;
+  }
+
+} */
+
+/* 
+.container {
+  position: relative;
+}
+.mummy {
+  height: 600px;
+  position: relative;
+  display: inline-block;
+  left: 25%;
+}
+
+.rect {
+  stroke: yellow;
+  fill: none;
+  stroke-width: 13;
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  left: 40%;
+}
+
+.content {
+  position: absolute;
+  display: inline-block;
+  color: #dee4ef;
+  font-family: 'Michroma', sans-serif;
+  min-width: 400px;
+  margin: 0;
+  margin-left: 2rem;
+  padding: 0;
+  top: 12%;
+  text-align: left;
+}
+
+.coals::before {
+  content:
+}
+
+.coals {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-us {
+  top: 10%;
+  margin-top: 4rem;
+  width: 300px;
+  display: grid;
+  grid-template-areas: "office getInTouch";
+  color: #dee4ef;
+  font-family: "montserrat";
+  font-size: 10px;
+}
+
+.office {
+  grid-area: office;
+  margin: 0;
+}
+
+.get-in-touch {
+  grid-area: getInTouch;
+}
+
+.dummy-content {
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  background-color: tomato;
+} */

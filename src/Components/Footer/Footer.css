@@ -1,4 +1,7 @@
 .footer {
   background-color: #263037;
   height: 80px;
+  color: aliceblue;
+  text-align: center;
+  font-size: 3rem;
 }

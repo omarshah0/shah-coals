@@ -1,5 +1,8 @@
 .header {
-  margin: 12px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hamburger {
@@ -15,17 +18,28 @@
   margin-left: 20px;
 }
 
-.header-desktop {
+.brand-logo {
+  display: none;
+}
+
+.navbar {
   display: none;
 }
 
 @media (min-width: 700px) {
-  .hamburger {
-    display: none;
+  .header {
+    padding: .5rem 1rem;
   }
 
-  .header-desktop {
-    display: unset;
+  .brand-logo {
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+  }
+  .header-mobile {
+    display: none;
   }
 
   ul li {
@@ -33,21 +47,5 @@
     color: white;
     display: inline;
     margin: 0 40px;
-  }
-  
-  .nav-logo-wrapper {
-    display: flex;
-    justify-content: space-around;
-  }
-  .nav-list {
-    display: inline-block;
-  }
-  
-  .brand-logo {
-    grid-area: logo;
-  }
-  
-  .navbar {
-    grid-area: nav;
   }
 }

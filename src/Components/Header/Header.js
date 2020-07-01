@@ -12,8 +12,6 @@ function Header(props) {
           <div className="hamburger"></div>
         </div>
       </div>
-      <div className="header-desktop">
-        <div className="nav-logo-wrapper">
           <div className="brand-logo">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/ios-application-placeholder.png" alt="brand-logo"/>
           </div>
@@ -26,9 +24,7 @@ function Header(props) {
                 <li className="nav-item">Contact</li>
               </ul>
             </nav>
-          </div>
-        </div>
-      </div>
+          </div>  
     </header>
   );
 }

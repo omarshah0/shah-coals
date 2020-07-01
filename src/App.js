@@ -14,6 +14,7 @@ function App() {
   }
   function closeMenuOnly() {
     setMenuToggle(false);
+    console.log("CLICKEEEED");
   }
 
   return (
