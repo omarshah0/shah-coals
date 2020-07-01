@@ -16,7 +16,7 @@
 }
 
 .contact-info {
-  margin-top: 13rem;
+  margin-top: 10rem;
 }
 
 .design_left,
@@ -58,6 +58,14 @@
 .office,
 .get-in-touch {
   font-size: 10px;
+}
+
+.follow-up {
+  display: block;
+  margin: 1rem;
+  text-decoration: none;
+  color: rgb(185, 185, 185);
+  font-size: 12px;
 }
 
 /* Media Query For Desktop */
@@ -127,7 +135,6 @@
     font-family: "montserrat";
     font-size: 10px;
     display: grid;
-    grid-template-areas: "office getInTouch";
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     padding: 0 1.5rem;

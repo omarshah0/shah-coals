@@ -25,13 +25,14 @@ function Content(porps) {
           <div className="office">
             <h2>Office</h2>
             <h3>
-              House 89/90, Bodla Colony <br></br>Dera Ghazi Khan
+              Mohsin Town, Pull Dat <br></br>Dera Ghazi Khan
             </h3>
           </div>
           <div className="get-in-touch">
             <h2>Get In Touch</h2>
-            <h3>T. +92 335 123 0333</h3>
-            <h3>E. info@shahcoals.com</h3>
+            <a href="tel: +923336483355" className="follow-up">+92 333 6483355</a>
+            <a href="tel: +923216483355" className="follow-up">+92 321 6483355</a>
+            <a href = "mailto: shahcoals@gmail.com" className="follow-up">shahcoals@gmail.com</a>
           </div>
         </div>
       </div>
