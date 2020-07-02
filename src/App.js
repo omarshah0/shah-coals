@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import Content from "./Components/Content/Content";
 import Footer from "./Components/Footer/Footer";
 import SideDrawer from "./Components/Mobile Drawer/SideDrawer";
+import Coal from "./Components/Coal/Coal";
 
 function App() {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -29,6 +30,9 @@ function App() {
       </CSSTransition>
       <Header openDrawer={toggleMenu} />
       <Content closemenu={closeMenuOnly} />
+      <Coal coalName="BK-6" moisture="10" ash="3.14" sulfur="64" oxygen="30"/>
+      <Coal />
+      <Coal />
       <Footer />
     </div>
   );
