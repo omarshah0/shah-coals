@@ -1,70 +1,85 @@
 .coal-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   position: relative;
   padding: 5rem;
 }
 
 .chart {
-    position: absolute;
-    width: 30%;
-    left:2%;
-    bottom:4%;
+  position: absolute;
+  width: 30%;
+  left: 2%;
+  bottom: 4%;
 }
 
 .chart h2 {
-    color: rgb(185, 185, 185);
-    font-family: "Michroma", sans-serif;
+  color: rgb(185, 185, 185);
+  font-family: "Michroma", sans-serif;
 }
 
 .chart li {
-    margin: 0;
+  margin: 0;
 }
 
 li {
-    list-style: none;
-    font-family: sans-serif;
-    padding: 0;
-    color: darkgray;
-    display: block
+  list-style: none;
+  font-family: sans-serif;
+  padding: 0;
+  color: darkgray;
+  display: block;
 }
 
 li h5 {
-    margin: 1% 0;
-    padding: 0;
+  margin: 1% 0;
+  padding: 0;
 }
 
 li h5 {
-    font-size: calc(8px + (15 - 8) * ((100vw - 300px) / (1600 - 300)));
-    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));;
+  font-size: calc(8px + (15 - 8) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .bar {
-    background: #2f2f2f;
-    display: block;
-    height: 5px;
-    border: 1px solid rgba(0,0,0,0.3);
-    overflow: hidden;
+  background: #2f2f2f;
+  display: block;
+  height: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .bar span {
-    height: 5px;
-    float: left;
-    background: #A9A9A9;
+  height: 5px;
+  float: left;
+  background: #a9a9a9;
 }
 
 .m416 {
-    width: 100%;
-    padding: 0 5rem;
-    animation: rotation 3s infinite alternate cubic-bezier(1,1,0,-0.01);
+  width: 100%;
+  padding: 0 5rem;
+  animation: rotation 3s infinite alternate cubic-bezier(1, 1, 0, -0.01);
 }
 
 @keyframes rotation {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(-180deg);
-    }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+/* Mobile Media Query */
+@media only screen and (max-width: 768px) {
+  .coal-container {
+    border: 1px solid #2f2f2f;
+    padding: 5rem 2rem;
+    justify-content: flex-end;
+  }
+  .m416 {
+      padding: 0;
+      width: 65%;
+  }
+  .chart {
+    top: 10%;
+    left: 5%;
+  }
 }

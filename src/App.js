@@ -31,8 +31,8 @@ function App() {
       <Header openDrawer={toggleMenu} />
       <Content closemenu={closeMenuOnly} />
       <Coal coalName="BK-6" moisture="10" ash="3.14" sulfur="64" oxygen="30"/>
-      <Coal />
-      <Coal />
+      <Coal coalName="BK-2" moisture="30" ash="12.14" sulfur="34" oxygen="70"/>
+      <Coal coalName="BK-4" moisture="20" ash="34" sulfur="87" oxygen="40"/>
       <Footer />
     </div>
   );

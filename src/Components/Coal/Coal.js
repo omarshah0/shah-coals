@@ -7,7 +7,7 @@ import "./Coal.css";
 function Coal(props) {
   return (
     <div className="coal-container">
-      <img src={m416} className="m416" alt="m416"></img>
+        <img src={m416} className="m416" alt="m416"></img>
       <div className="chart">
         <h2>{props.coalName}</h2>
         <li>
