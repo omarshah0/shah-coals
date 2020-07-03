@@ -19,9 +19,15 @@ function Coal(props) {
       </span>
     </li>
     <li>
-      <h5>Ash - {item.ash}%</h5>
+      <h5>Volatile Matter - {item.volatileMatter}%</h5>
       <span className="bar">
-        <span style={{ width: item.ash + "%" }}></span>
+        <span style={{ width: item.volatileMatter + "%" }}></span>
+      </span>
+    </li>
+    <li>
+      <h5>Fixed Carbon - {item.fixedCarbon}%</h5>
+      <span className="bar">
+        <span style={{ width: item.fixedCarbon + "%" }}></span>
       </span>
     </li>
     <li>
@@ -29,11 +35,10 @@ function Coal(props) {
       <span className="bar">
         <span style={{ width: item.sulfur + "%" }}></span>
       </span>
-    </li>
-    <li>
-      <h5>Oxygen - {item.oxygen}%</h5>
+    </li><li>
+      <h5>Ash - {item.ash}%</h5>
       <span className="bar">
-        <span style={{ width: item.oxygen + "%" }}></span>
+        <span style={{ width: item.ash + "%" }}></span>
       </span>
     </li>
   </div>
