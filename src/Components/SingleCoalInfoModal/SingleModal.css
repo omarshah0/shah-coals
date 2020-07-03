@@ -1,0 +1,52 @@
+/* Mobile Media Query */
+@media only screen and (max-width: 768px) {
+  .backdrop {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    top: 0vh;
+    left: 0vh;
+    bottom: 0vh;
+    right: 0vh;
+    opacity: 0.95;
+    z-index: 100;
+    display: flex;
+  }
+
+  .coal-info {
+    color: white;
+    background-color: rgb(43, 42, 42);
+    text-align: center;
+    margin: auto auto;
+    padding-top: 5%;
+    transform: translate(45vw, 40vh);
+    animation: openCoalBox 0.6s ease-in-out forwards;
+    border-radius: 1rem;
+    font-family: "Michroma", sans-serif;
+  }
+
+  @keyframes openCoalBox {
+    from {
+      width: 0%;
+      height: 0%;
+    }
+    to {
+      transform: translate(0%, 0%);
+      width: 90%;
+      height: 90%;
+    }
+  }
+  .cola {
+    animation: cola 1s ease-in-out forwards;
+  }
+
+  @keyframes cola {
+    from {
+      font-size: calc(1px + (1 - 0) * ((100vw - 300px) / (1600 - 300)));
+      line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    }
+    to {
+      font-size: calc(20px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
+      line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    }
+  }
+}
