@@ -24,7 +24,7 @@ function Content(porps) {
         <div className="contact-info">
           <div className="office">
             <h2>Office</h2>
-            <h3>
+            <h3 className="address">
               Mohsin Town, Pull Dat <br></br>Dera Ghazi Khan
             </h3>
           </div>

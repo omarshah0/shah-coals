@@ -149,6 +149,15 @@
   .design_right {
     top: 40%;
   }
+
+  .follow-up {
+    font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: bold;
+  }
+  .address {
+    font-size: 14px;
+  }
 }
 
 /* IPAD Media Query */

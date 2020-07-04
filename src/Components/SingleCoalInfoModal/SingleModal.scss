@@ -1,0 +1,65 @@
+.coal-info {
+  position: fixed;
+  top: 5vh;
+  left: 4.5vw;
+  height: 90vh;
+  width: 90vw;
+  border-radius: 1rem;
+  color: rgb(185, 185, 185);
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  z-index: 10;
+
+  #mdiv {
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin: 1rem;
+  }
+
+  .mdiv {
+    height: 25px;
+    width: 2px;
+    margin-left: 12px;
+    background-color: rgb(185, 185, 185);
+    transform: rotate(45deg);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .md {
+    height: 25px;
+    width: 2px;
+    background-color: rgb(185, 185, 185);
+    transform: rotate(90deg);
+    z-index: 2;
+  }
+
+  img {
+    width: 50%;
+    margin: 4%;
+  }
+}
+
+.exit-active {
+  animation: fadeOut 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

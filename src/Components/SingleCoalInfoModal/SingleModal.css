@@ -1,52 +1,88 @@
-/* Mobile Media Query */
-@media only screen and (max-width: 768px) {
-  .backdrop {
-    position: fixed;
-    background-color: rgb(0, 0, 0);
-    top: 0vh;
-    left: 0vh;
-    bottom: 0vh;
-    right: 0vh;
-    opacity: 0.95;
-    z-index: 100;
-    display: flex;
-  }
+.coal-info {
+  position: fixed;
+  top: 5vh;
+  left: 4.5vw;
+  height: 90vh;
+  width: 90vw;
+  border-radius: 1rem;
+  color: #b9b9b9;
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  -webkit-animation: fadeIn 0.8s ease-in-out forwards;
+          animation: fadeIn 0.8s ease-in-out forwards;
+  z-index: 10;
+}
 
-  .coal-info {
-    color: white;
-    background-color: rgb(43, 42, 42);
-    text-align: center;
-    margin: auto auto;
-    padding-top: 5%;
-    transform: translate(45vw, 40vh);
-    animation: openCoalBox 0.6s ease-in-out forwards;
-    border-radius: 1rem;
-    font-family: "Michroma", sans-serif;
-  }
+.coal-info #mdiv {
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin: 1rem;
+}
 
-  @keyframes openCoalBox {
-    from {
-      width: 0%;
-      height: 0%;
-    }
-    to {
-      transform: translate(0%, 0%);
-      width: 90%;
-      height: 90%;
-    }
-  }
-  .cola {
-    animation: cola 1s ease-in-out forwards;
-  }
+.coal-info .mdiv {
+  height: 25px;
+  width: 2px;
+  margin-left: 12px;
+  background-color: #b9b9b9;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 1;
+  cursor: pointer;
+}
 
-  @keyframes cola {
-    from {
-      font-size: calc(1px + (1 - 0) * ((100vw - 300px) / (1600 - 300)));
-      line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
-    }
-    to {
-      font-size: calc(20px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
-      line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
-    }
+.coal-info .md {
+  height: 25px;
+  width: 2px;
+  background-color: #b9b9b9;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 2;
+}
+
+.coal-info img {
+  width: 50%;
+  margin: 4%;
+}
+
+.exit-active {
+  -webkit-animation: fadeOut 0.8s ease-in-out forwards;
+          animation: fadeOut 0.8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=SingleModal.css.map */

@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import SideDrawer from "./Components/Mobile Drawer/SideDrawer";
 import Coal from "./Components/Coal/Coal";
 import SingleModal from "./Components/SingleCoalInfoModal/SingleModal";
+import Backdrop from "./Components/Backdrop/Backdrop";
 
 function App() {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -16,34 +17,34 @@ function App() {
   const coalData = [
     {
       id: 1,
-      name: "BK L II",
+      name: "BK 2",
       size: "2-Footy",
-      moisture: 3,
+      moisture: 2,
       volatileMatter: 43,
-      sulfur: 3.35,
-      fixedCarbon: 47,
-      ash: 4.5,
+      sulfur: 11,
+      fixedCarbon: 37,
+      ash: 18,
     },
     {
       id: 2,
-      name: "BK-6",
-      size: "6-Footy",
-      moisture: 3.14,
-      volatileMatter: 56,
-      sulfur: 34,
-      fixedCarbon: 45,
-      Ash: 83,
+      name: "BK-4",
+      size: "4-Footy",
+      moisture: 2.6,
+      volatileMatter: 43,
+      sulfur: 7,
+      fixedCarbon: 47,
+      Ash: 4.5,
     },
     {
       id: 3,
       name: "BK-6",
       size: "6-Footy",
-      moisture: 3.14,
-      volatileMatter: 56,
-      sulfur: 34,
-      fixedCarbon: 45,
-      Ash: 83,
-    }
+      moisture: 3.5,
+      volatileMatter: 42,
+      sulfur: 7.5,
+      fixedCarbon: 52,
+      Ash: 3.5,
+    },
   ];
 
   function toggleMenu() {
@@ -67,7 +68,11 @@ function App() {
       }));
     console.log(data);
     setCoalInfoData(data);
-    setCoalInfoVisibility(!coalInfoVisibility);
+    setCoalInfoVisibility(true);
+  }
+
+  function closeCoalInfo() {
+    setCoalInfoVisibility(false);
   }
 
   return (
@@ -83,9 +88,25 @@ function App() {
       <Header openDrawer={toggleMenu} />
       <Content closemenu={closeMenuOnly} />
       <Coal coaldata={coalData} coalInfoModal={toggleCoalInfo} />
-      {coalInfoVisibility ? (
-        <SingleModal closecoalmodal={toggleCoalInfo} coalinfodata={coalInfoData}/>
-      ) : null}
+      <CSSTransition
+        in={coalInfoVisibility}
+        timeout={800}
+        className="closeCoal"
+        unmountOnExit
+      >
+        <SingleModal
+          closecoalmodal={closeCoalInfo}
+          coalinfodata={coalInfoData}
+        />
+      </CSSTransition>
+      <CSSTransition
+        in={coalInfoVisibility}
+        timeout={800}
+        className="closeCoal"
+        unmountOnExit
+      >
+        <Backdrop />
+      </CSSTransition>
       <Footer />
     </div>
   );
