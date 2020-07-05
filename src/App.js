@@ -12,7 +12,7 @@ import Backdrop from "./Components/Backdrop/Backdrop";
 function App() {
   const [menuToggle, setMenuToggle] = useState(false);
   const [coalInfoVisibility, setCoalInfoVisibility] = useState(false);
-  const [coalInfoData, setCoalInfoData] = useState("");
+  const [coalInfoData, setCoalInfoData] = useState(null);
 
   const coalData = [
     {
@@ -33,7 +33,7 @@ function App() {
       volatileMatter: 43,
       sulfur: 7,
       fixedCarbon: 47,
-      Ash: 4.5,
+      ash: 4.5,
     },
     {
       id: 3,
@@ -43,16 +43,16 @@ function App() {
       volatileMatter: 42,
       sulfur: 7.5,
       fixedCarbon: 52,
-      Ash: 3.5,
+      ash: 3.5,
     },
   ];
 
   function toggleMenu() {
     setMenuToggle(!menuToggle);
   }
-  function closeMenuOnly() {
+  const closeMenuOnly = React.useCallback(() => {
     setMenuToggle(false);
-  }
+  }, [setMenuToggle]);
 
   function toggleCoalInfo(e) {
     const data = coalData
@@ -66,7 +66,6 @@ function App() {
         sulfur,
         oxygen,
       }));
-    console.log(data);
     setCoalInfoData(data);
     setCoalInfoVisibility(true);
   }

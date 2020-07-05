@@ -7,8 +7,8 @@ function SingleModal(props) {
   return (
     <div className="coal-info">
       <div id="mdiv" onClick={props.closecoalmodal}>
-        <div class="mdiv">
-          <div class="md"></div>
+        <div className="mdiv">
+          <div className="md"></div>
         </div>
       </div>
       <img src={m416} alt="m416"></img>

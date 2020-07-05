@@ -13,7 +13,7 @@ function Header(props) {
         </div>
       </div>
           <div className="brand-logo">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/ios-application-placeholder.png" alt="brand-logo"/>
+            <img alt="brand-logo"/>
           </div>
           <div className="navbar">
             <nav>
